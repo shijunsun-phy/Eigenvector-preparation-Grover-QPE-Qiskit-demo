@@ -20,30 +20,10 @@ $$U |x^* \rangle = e^{2πi t} |x^* \rangle.$$
 
 The goal is to **prepare the eigenvector $|x^*\rangle$** using a fully unitary circuit.
 
----
-
-## Design Insight
-
-Instead of searching over bitstrings directly, we search over **eigenphases**.
-
-The key idea:
-
-> Turn Quantum Phase Estimation into a phase filter that acts as a Grover oracle.
-
-We construct a phase-selective oracle:
-
-$$U_t |x⟩ =
-- −|x⟩  if θ(x) = t  
--  |x⟩  otherwise$$
-
-Once this oracle exists, standard Grover amplification prepares |x*⟩.
-
-The challenge is therefore not Grover —  
-it is **building the oracle coherently**.
-
----
 
 ## Oracle Construction
+
+**Key idea:** Turn Quantum Phase Estimation into a phase filter that acts as a Grover oracle.
 
 The oracle is built using three steps:
 
@@ -56,7 +36,7 @@ We run QPE using:
 
 This maps:
 
-$$|x⟩_S |0⟩_P → |x⟩_S |θ(x)⟩_P$$
+$$|x\rangle_S |0\rangle_P → |x\rangle_S |\theta(x)\rangle_P$$
 
 Because of the promise, the phase is exactly representable in d bits.
 
@@ -68,7 +48,7 @@ We compare the extracted phase with the target phase t.
 
 If they match, a controlled phase flip is applied:
 
-$$|x⟩_S |θ(x)⟩_P → (−1)^[θ(x)=t] |x⟩_S |θ(x)⟩_P$$
+$$|x\rangle_S |\theta(x)\rangle_P → (−1)^{[\theta(x)=t]} |x\rangle_S |\theta(x)\rangle_P$$
 
 ---
 
@@ -76,11 +56,11 @@ $$|x⟩_S |θ(x)⟩_P → (−1)^[θ(x)=t] |x⟩_S |θ(x)⟩_P$$
 
 We invert QPE:
 
-$$|θ(x)⟩_P \rangle |0⟩_P$$
+$$|\theta(x)\rangle_P \rightarrow |0\rangle_P$$
 
 leaving:
 
-$$(−1)^[θ(x)=t] |x⟩_S$$
+$$(−1)^{[θ(x)=t]} |x\rangle_S$$
 
 This is exactly the Grover oracle.
 
@@ -90,11 +70,11 @@ This is exactly the Grover oracle.
 
 The full Grover iterate is:
 
-$$G = U_t · D$$
+$$G = U_t \cdot D$$
 
-where D is the Grover diffuser acting on the search register.
+where $D$ is the Grover diffuser acting on the search register.
 
-Repeating this iterate prepares the unique eigenvector corresponding to the target phase.
+Repeating this iteration prepares the unique eigenvector corresponding to the target phase.
 
 ---
 
