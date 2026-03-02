@@ -40,7 +40,6 @@ $$|x\rangle_S |0\rangle_P → |x\rangle_S |\theta(x)\rangle_P$$
 
 Because of the promise, the phase is exactly representable in d bits.
 
----
 
 ### 2. Phase Matching
 
@@ -50,7 +49,6 @@ If they match, a controlled phase flip is applied:
 
 $$|x\rangle_S |\theta(x)\rangle_P → (−1)^{[\theta(x)=t]} |x\rangle_S |\theta(x)\rangle_P$$
 
----
 
 ### 3. Uncomputation
 
@@ -64,7 +62,6 @@ $$(−1)^{[θ(x)=t]} |x\rangle_S$$
 
 This is exactly the Grover oracle.
 
----
 
 ## Final Circuit
 
