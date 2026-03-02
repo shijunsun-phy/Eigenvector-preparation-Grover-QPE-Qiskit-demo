@@ -100,7 +100,7 @@ Example output:
 Target phase t:      0.375  
 Estimated phase:     0.375  
 Most likely state:   $|x*\rangle$  
-Success probability: 0.92  
+Success probability: 0.997  
 
 
 ---
