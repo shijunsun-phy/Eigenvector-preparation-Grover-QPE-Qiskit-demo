@@ -8,21 +8,17 @@ This repository is a small, self-contained demo of an eigenvector preparation ci
 
 Suppose we are given:
 
-- An **n-qubit diagonal unitary**
-  
-  $$U |x\rangle = e^{2πi θ(x)} |x\rangle$$
+- An **n-qubit diagonal unitary** $U |x\rangle = e^{2πi θ(x)} |x\rangle$
 
-- A promise that each eigenphase is a dyadic fraction:
-
-  $$2^d \theta(x) ∈ \mathbb{Z}$$
+- A promise that each eigenphase is a dyadic fraction:  $2^d \theta(x) ∈ \mathbb{Z}$
 
 - A **target phase** $t \in [0,1)$
 
-and we are promised that there exists a *unique* computational basis state |x*⟩ such that
+and we are promised that there exists a *unique* computational basis state $|x^*\rangle$ such that
 
-$$U |x*\rangle = e^{2πi t} |x*\rangle.$$
+$$U |x^*\rangle = e^{2πi t} |x^*\rangle.$$
 
-The goal is to **prepare the eigenvector |x*⟩** using a fully unitary circuit.
+The goal is to **prepare the eigenvector $|x^*\rangle$** using a fully unitary circuit.
 
 ---
 
