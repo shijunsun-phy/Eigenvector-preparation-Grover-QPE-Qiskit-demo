@@ -33,7 +33,7 @@ Open and run:
 
 ## Project layout
 
-- `src/eigenprep/` — reusable circuit builders + small analysis helpers
+- `eigenprep/` — reusable circuit builders + small analysis helpers
 - `scripts/run_n6_demo.py` — primary demo entrypoint
 - `notebooks/` — lightweight, presentation-friendly notebooks
 - `tests/` — small correctness checks (kept minimal)
