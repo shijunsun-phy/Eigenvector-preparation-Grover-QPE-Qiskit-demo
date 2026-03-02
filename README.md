@@ -37,8 +37,3 @@ Open and run:
 - `scripts/run_n6_demo.py` — primary demo entrypoint
 - `notebooks/` — lightweight, presentation-friendly notebooks
 - `tests/` — small correctness checks (kept minimal)
-
-## Notes
-
-- This project uses `DiagonalGate` (not deprecated `Diagonal`) and appends subcircuits as
-  `Instruction`s to avoid Qiskit deprecation warnings.
