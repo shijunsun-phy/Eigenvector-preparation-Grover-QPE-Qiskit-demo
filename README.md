@@ -10,7 +10,7 @@ Suppose we are given:
 
 - An **n-qubit diagonal unitary** $U |x\rangle = e^{2πi θ(x)} |x\rangle$
 
-- A promise that each eigenphase is a dyadic fraction:  $2^d \theta(x) ∈ \mathbb{Z}$
+- A promise that each eigenphase is a dyadic fraction:  $2^d \theta(x) \in \mathbb{Z}$
 
 - A **target phase** $t \in [0,1)$
 
