@@ -14,9 +14,7 @@ Suppose we are given:
 
 - A **target phase** $t \in [0,1)$
 
-and we are promised that there exists a *unique* computational basis state $|x^*\rangle$ such that
-
-$$U |x^* \rangle = e^{2πi t} |x^* \rangle.$$
+and we are promised that there exists a *unique* computational basis state $|x^*\rangle$ such that  $U |x^* \rangle = e^{2πi t} |x^* \rangle.$
 
 The goal is to **prepare the eigenvector $|x^*\rangle$** using a fully unitary circuit.
 
