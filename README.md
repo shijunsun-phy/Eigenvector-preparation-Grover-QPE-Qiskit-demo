@@ -1,11 +1,18 @@
 # Eigenvector-preparation-Grover-QPE-Qiskit-demo
+Shijun Sun
+
 This repository is a small, self-contained demo of an eigenvector preparation circuit using a Grover-amplified Quantum Phase Estimation (QPE) style construction.
+
+
+--------------------------------------------
+
+## Navigating the Repository
 
 The **primary entrypoint** is the **`n=6, d=6`** example:
 1) build and display the circuit, and  
 2) verify that the most-likely measurement outcome matches the target phase `t`.
 
-## Quick start
+### Quick start
 
 ```bash
 python -m venv .venv
@@ -13,7 +20,7 @@ source .venv/bin/activate
 pip install -e .
 ```
 
-### Run the n=6 demo (recommended)
+#### Run the n=6 demo (Recommended)
 
 ```bash
 python scripts/run_n6_demo.py
@@ -25,13 +32,13 @@ This will:
 - compute a simple success metric from the statevector,
 - save a circuit figure to `artifacts/circuit_n6.png`.
 
-### Notebook demo
+#### Notebook demo
 
 Open and run:
 
 - `notebooks/n6_demo.ipynb`
 
-## Project layout
+### Project layout
 
 - `eigenprep/` — reusable circuit builders + small analysis helpers
 - `scripts/run_n6_demo.py` — primary demo entrypoint
