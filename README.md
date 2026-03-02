@@ -10,17 +10,17 @@ Suppose we are given:
 
 - An **n-qubit diagonal unitary**
   
-  U |x⟩ = e^{2πi θ(x)} |x⟩
+  $$U |x\rangle = e^{2πi θ(x)} |x\rangle$$
 
 - A promise that each eigenphase is a dyadic fraction:
 
-  2^d θ(x) ∈ ℤ
+  $$2^d \theta(x) ∈ \mathbb{Z}$$
 
-- A **target phase** t ∈ [0,1)
+- A **target phase** $t \in [0,1)$
 
 and we are promised that there exists a *unique* computational basis state |x*⟩ such that
 
-U |x*⟩ = e^{2πi t} |x*⟩.
+$$U |x*\rangle = e^{2πi t} |x*\rangle.$$
 
 The goal is to **prepare the eigenvector |x*⟩** using a fully unitary circuit.
 
@@ -36,9 +36,9 @@ The key idea:
 
 We construct a phase-selective oracle:
 
-U_t |x⟩ =
+$$U_t |x⟩ =
 - −|x⟩  if θ(x) = t  
--  |x⟩  otherwise
+-  |x⟩  otherwise$$
 
 Once this oracle exists, standard Grover amplification prepares |x*⟩.
 
@@ -60,7 +60,7 @@ We run QPE using:
 
 This maps:
 
-|x⟩_S |0⟩_P → |x⟩_S |θ(x)⟩_P
+$$|x⟩_S |0⟩_P → |x⟩_S |θ(x)⟩_P$$
 
 Because of the promise, the phase is exactly representable in d bits.
 
@@ -72,7 +72,7 @@ We compare the extracted phase with the target phase t.
 
 If they match, a controlled phase flip is applied:
 
-|x⟩_S |θ(x)⟩_P → (−1)^[θ(x)=t] |x⟩_S |θ(x)⟩_P
+$$|x⟩_S |θ(x)⟩_P → (−1)^[θ(x)=t] |x⟩_S |θ(x)⟩_P$$
 
 ---
 
@@ -80,11 +80,11 @@ If they match, a controlled phase flip is applied:
 
 We invert QPE:
 
-|θ(x)⟩_P → |0⟩_P
+$$|θ(x)⟩_P \rangle |0⟩_P$$
 
 leaving:
 
-(−1)^[θ(x)=t] |x⟩_S
+$$(−1)^[θ(x)=t] |x⟩_S$$
 
 This is exactly the Grover oracle.
 
@@ -94,7 +94,7 @@ This is exactly the Grover oracle.
 
 The full Grover iterate is:
 
-G = U_t · D
+$$G = U_t · D$$
 
 where D is the Grover diffuser acting on the search register.
 
@@ -126,7 +126,7 @@ Example output:
 
 Target phase t:      0.375  
 Estimated phase:     0.375  
-Most likely state:   |x*>  
+Most likely state:   $|x*\rangle$  
 Success probability: 0.92  
 
 
