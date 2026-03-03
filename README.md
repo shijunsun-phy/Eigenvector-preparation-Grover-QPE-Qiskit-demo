@@ -98,7 +98,7 @@ This will:
 Example output:
 
 [Output circuit](output_circuit_n6.png)
-Note: for Grover search with $n=6$, $K = \operatorname{round}\!\left(
+Note: for Grover search with $n=6$, $K = \left(
 \frac{\pi}{4\,\arcsin\!\left(2^{-n/2}\right)} - \frac{1}{2}
 \right) = 6$ iterations are needed
 
