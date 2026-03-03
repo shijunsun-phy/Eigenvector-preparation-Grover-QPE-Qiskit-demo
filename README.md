@@ -99,8 +99,6 @@ Example output:
 
 [Output circuit](output_circuit_n6.png)
 
-Note: for Grover search with $n=6$, 6 iterations are needed
-
 Target phase t:      0.375  
 Estimated phase:     0.375  
 Most likely state:   $|x*\rangle$  
